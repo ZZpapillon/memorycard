@@ -1,0 +1,18 @@
+.card img{
+    height: 100px;
+    width: 100px;
+    
+    text-align: center;
+    color: white;
+    font-size: 1rem;
+}
+
+.cardsContainer {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: repeat(5, 1fr);
+    /* Adjust the number of columns as needed */
+    background-color: pink;
+    
+    height: 100px;
+}
