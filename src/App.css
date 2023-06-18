@@ -1,18 +1,150 @@
-.card img{
-    height: 100px;
-    width: 100px;
+@font-face {
+    font-family: 'PokemonFont';
+    /* Specify a name for the font family */
+    src: url('Pokemon\ Solid.ttf') format('truetype');
+    /* Adjust the path to the font file */
+}
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: red;
+}
+
+.container {
+    display: grid;
+    grid-template-areas: '. header'
+                          'sidebar content2'
+                          'footer footer';
+    grid-template-columns: 30% 70%;
+    grid-template-rows: 0.3fr 7fr 0.2fr;
+    height: 100vh;
+    width: 100vw;
+}
+
+.header {
+    grid-area: header;
+    background-color: red;
+    color: white;
+    font-size: 1.7rem;
+}
+.sidebar {
+    grid-area: sidebar;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    font-family: 'Arial', sans-serif;
+        /* Use a font similar to the Pokemon logo */
+        font-size: 38px;
+        background-color: red;
+        /* Adjust the font size as needed */
+        text-transform: uppercase;
+        /* Make the text uppercase */
+        border-right: 2vw solid rgb(55, 55, 55);
+        /* Set the background color to red */
+        color: white;
+        /* Set the text color to white */
+        padding: 10px 20px;
+        /* Add padding to the text for spacing */
+       
+        place-items: center;
+        overflow: hidden;
+}
+
+.gif img {
+    height: 25vh;
+    width: 20vw;
+    margin-left: -10%;
+    margin-top: -60%;
+    border-radius: 50%;
     
+}
+.logo img {
+    height: 35vh;
+    width: 30vw;
+    margin-left: -10%;
+   
+}
+.text {
+    justify-self: start;
+    font-family: PokemonFont, sans-serif;
+    font-size: 4.5vw;
+    text-shadow: -6px -6px 0px black, 6px -6px 0px black, -6px 6px 0px black, 6px 6px 0px black;
+        color: white;
+        margin-left: 12%;
+        margin-top: -65%;
+}
+
+.ball img {
+    height: 7%;
+    width: 5%;
+    position: absolute;
+    bottom: 50%;
+    left: 26.4%;
+    
+}
+
+
+.content {
+    grid-area: content2;
+    padding: 1rem;
+    background-image: url('./bg1.jpeg');
+    background-size: cover;
+    border-top: 1vh solid rgb(55, 55, 55);
+    border-bottom: 1vh solid rgb(55, 55, 55);
+    overflow: auto;
+
+}
+.footer {
+    grid-area: footer;
     text-align: center;
     color: white;
+    font-size: 1.7rem;
+    padding-bottom: 1vh;
+}
+
+
+
+
+.card img{
+    height: 16vh;
+    width: 10vw;
+    
+    
+    
+}
+
+.card {
+    text-align: center;
+    border: 0.5vh solid rgb(55, 55, 55);
+    border-radius: 8%;
+    cursor: pointer;
+    transition: box-shadow 0.3s ease;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
+    background-color: #ffffff;
+    color: rgb(55, 55, 55);
     font-size: 1rem;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.5);
+}
+.card:active {
+    border: 0.5vh solid red;
 }
 
 .cardsContainer {
     display: grid;
-    grid-template-rows: 1fr;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 4fr;
+    grid-template-columns: repeat(3, 1fr);
     /* Adjust the number of columns as needed */
-    background-color: pink;
     
-    height: 100px;
+    gap: 2vh;
+    
+    
+}
+.scoreboard {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-items: center;
 }
